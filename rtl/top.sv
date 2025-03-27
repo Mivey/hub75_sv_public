@@ -45,7 +45,7 @@ mem_loader # (
     .OUT_REG(OUT_REG)
   )
   mem_loader_inst (
-    .clk(slow_clk),
+    .clk(clk),
     .s_axi_valid(s_axi_valid),
     .s_axi_ready(s_axi_ready),
     .s_axi_data(s_axi_data),
@@ -65,7 +65,7 @@ mem_loader # (
     .CLK_SPEED(CLK_SPEED)
   )
   hub75_inst (
-    .clk(clk),
+    .clk(slow_clk),
     .s_axi_valid(axi_valid),
     .s_axi_ready(axi_ready),
     .reset_n(reset_n),
